@@ -10,7 +10,18 @@ Given two strings, write a function to check if they are one edit
 #Pale, Bake -> false
 
 
-def strCompare():
+def strCompare(w1, w2):
+
+	lw1 = len(w1)
+	lw2 = len(w2)
+
+	if w1 == w2: print ("true")
+	
+
+w1 = "Apple"
+w2 = "appleee"
+
+strCompare(w1.lower(), w2.lower())
 
 
 
