@@ -1,30 +1,27 @@
-"""There are three types of eddits that can be performed on a string:
+"""There are three types of edits that can be performed on a string:
 insert a character, remove a character, or replace a character.
 Given two strings, write a function to check if they are one edit
 (or zero edits) away."""
 
+#Edit Distance (Levenahtein Distance)
+
 #Examples:
 #Pale, Pie -> false
 #Pales, Pale -> true
-#Pales, Bale -> true
+#Pale, Bale -> true
 #Pale, Bake -> false
 
+def levenshtein(w1, w2):
+	if len(w1) == 0: return len(w2)
+	if len(w2) == 0: return len(w1)
+	if w1[-1] == w2[-1]:
+		cost = 0
+	else:
+		cost = 1
 
-def strCompare(w1, w2):
-
-	lw1 = len(w1)
-	lw2 = len(w2)
-
-	if w1 == w2: print ("true")
-	
-
-w1 = "Apple"
-w2 = "appleee"
-
-strCompare(w1.lower(), w2.lower())
-
-
-
-
-
+	return min([
+		levenshtein(w1[0:len(w1)-1], w2) + 1,
+		levenshtein(w1, w2[0:len(w2)-1]) + 1,
+		levenshtein(w1[0:len(w1)-1], w2[0:len(w2)-1]) + cost
+		])
 
