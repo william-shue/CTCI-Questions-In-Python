@@ -1,4 +1,4 @@
-'''Assume you have a method isSubstring which check if one word is a substring of another.
+'''Assume you have a method isSubstring which checks if one word is a substring of another.
 Given two string, s1 and s2, write code to check if s2 is a rotation of s1 using only one
 call to isSubstring (eg. "waterbottle" is a rotation of "erbottlewat")'''
 
@@ -6,7 +6,7 @@ call to isSubstring (eg. "waterbottle" is a rotation of "erbottlewat")'''
 
 Essentially, by the fact that the rotated string is just the string itself shifted in one
 direction or the other, by contactenating it to itself, the rotation offset will naturally
-align it to complete the entire word: 
+align it to complete the entire word:
 
 "erbottlewat" + "erbottlewat" = "erbottlewaterbottlewat"
 
